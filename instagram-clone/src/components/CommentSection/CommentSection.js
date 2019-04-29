@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const CommentSection = ({ddata}) => {
   return (
@@ -6,6 +7,10 @@ const CommentSection = ({ddata}) => {
         <p>{ddata.username}</p>
     </div>
   )
+}
+
+CommentSection.propTypes = {
+   
 }
 
 export default  CommentSection;
