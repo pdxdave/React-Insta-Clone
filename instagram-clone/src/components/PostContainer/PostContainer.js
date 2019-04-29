@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 const PostContainer = ({dummyData}) => {
   return (
     <div>
-       {dummyData.map(ddata => {
+       {dummyData.map((ddata) => {
            return (
-               <div>
-                   <CommentSection key={ddata} ddata={ddata} />
+               <div key={ddata.id}> 
+                   <CommentSection comments={ddata.comments} />
                </div>
            )
        })}

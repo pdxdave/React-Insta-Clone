@@ -1,10 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import Comment from './Comment';
 
-const CommentSection = ({ddata}) => {
+// import PropTypes from 'prop-types';
+
+const CommentSection = ({comments}) => {
   return (
     <div>
-        <p>{ddata.username}</p>
+        {comments.map((com) => {
+            console.log(com)
+           return (
+               
+               <div key={com.id}>
+                   <p>{com.text}</p>
+               </div>
+           )
+        })}
     </div>
   )
 }

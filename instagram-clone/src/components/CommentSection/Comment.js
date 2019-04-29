@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Comment = ()  => {
+const Comment = () => {
   return (
     <div>
       
@@ -8,4 +8,5 @@ const Comment = ()  => {
   )
 }
 
-export default Comment;
+
+export default  Comment;
