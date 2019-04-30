@@ -5,17 +5,36 @@ import Comment from './Comment';
 
 const CommentSection = ({comments}) => {
   return (
-    <div>
-        {comments.map((com) => {
-            console.log(com)
-           return (
+
+        <div>
+           
+            {comments.map((userCom, index) => {
+                return (
+                    <div key={index}>
+                      <Comment user={userCom.username} textPost={userCom.text}/>
+                    </div>
+                )
+            })}
+
+        </div>
+
+
+
+    // <div>
+      
+    //     {comments.map((com) => {
+    //         console.log(com)
+    //        return (
                
-               <div key={com.id}>
-                   <p>{com.text}</p>
-               </div>
-           )
-        })}
-    </div>
+    //            <div key={com.id}>
+    //                <p>{com.id}</p>
+    //                <p>{com.username}</p>
+    //                <p>{com.text}</p>
+    //                <br/>
+    //            </div>
+    //        )
+    //     })}
+    // </div>
   )
 }
 
