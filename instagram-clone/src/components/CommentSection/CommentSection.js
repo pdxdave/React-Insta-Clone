@@ -7,7 +7,6 @@ const CommentSection = ({comments}) => {
   return (
 
         <div>
-           
             {comments.map((userCom, index) => {
                 return (
                     <div key={index}>
@@ -15,7 +14,6 @@ const CommentSection = ({comments}) => {
                     </div>
                 )
             })}
-
         </div>
 
 

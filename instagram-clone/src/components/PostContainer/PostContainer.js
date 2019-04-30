@@ -12,7 +12,15 @@ const PostContainer = ({dummyData}) => {
                <div className="card--container" key={index}> 
                   <div className="card--logo-container"><img className="card--logo" src={ddata.thumbnailUrl} alt="company logo"/><span>{ddata.username}</span></div>
                    <img className="card--image" src={ddata.imageUrl} alt=""/>
+                   <div className="icons">
+                       <div><i className="far fa-heart"></i></div>
+                       <div><i className="far fa-comment"></i></div>
+                   </div>
+                   <div className="card--likes">
+                       <p>{ddata.likes} likes</p>
+                   </div>
                    <CommentSection comments={ddata.comments} />
+                   <p className="card--timestamp">{ddata.timestamp}</p>
                </div>
            )
        })}

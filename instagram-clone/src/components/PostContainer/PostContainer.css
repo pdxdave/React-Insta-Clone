@@ -4,7 +4,6 @@
     width: 600px;
     border-radius: 3px;
 }
-
 .card--image {
     width: 600px;
 }
@@ -22,4 +21,25 @@
     font-size: .9rem;
     font-weight: bold;
     margin-left: 16px;
+}
+.icons {
+    display: flex;
+    font-weight: lighter;
+    font-size: 1.8rem;
+}
+.far {
+    margin: 20px 7px;
+}
+.fa-heart {
+    margin-left: 16px;
+}
+.card--likes {
+    margin-top: -10px;
+    margin-left: 16px;
+    padding-bottom: 12px;
+}
+.card--timestamp {
+    margin-left: 16px;
+    margin-top: 12px;
+    color: #808080;
 }

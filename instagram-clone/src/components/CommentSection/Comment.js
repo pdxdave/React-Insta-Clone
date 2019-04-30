@@ -1,10 +1,10 @@
 import React from 'react'
+import './CommentSection.css';
 
 const Comment = ({user, textPost}) => {
   return (
-    <div>
-        <p>{user}</p>
-        <p>{textPost}</p>
+    <div className="comment">
+       <p><span>{user}</span>  {textPost}</p>
     </div>
   )
 }
