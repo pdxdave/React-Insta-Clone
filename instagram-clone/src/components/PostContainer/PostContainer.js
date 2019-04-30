@@ -5,13 +5,13 @@ import './PostContainer.css'
 
 const PostContainer = ({dummyData}) => {
   return (
-    <div>
+    <div className="card" >
        {dummyData.map((ddata, index) => {
            console.log(ddata.imageUrl)
            return (
-               <div key={index}> 
-                   <p>{ddata.timestamp}</p>
-                   <img src={ddata.imageUrl} alt="test"/>
+               <div className="card--container" key={index}> 
+                  <div className="card--logo-container"><img className="card--logo" src={ddata.thumbnailUrl} alt="company logo"/><span>{ddata.username}</span></div>
+                   <img className="card--image" src={ddata.imageUrl} alt=""/>
                    <CommentSection comments={ddata.comments} />
                </div>
            )
