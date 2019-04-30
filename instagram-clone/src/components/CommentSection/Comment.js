@@ -1,6 +1,7 @@
 import React from 'react'
 import './CommentSection.css';
 
+
 const Comment = ({user, textPost}) => {
   return (
     <div className="comment">
@@ -8,6 +9,7 @@ const Comment = ({user, textPost}) => {
     </div>
   )
 }
+
 
 
 export default  Comment;

@@ -7,8 +7,15 @@ import SearchBar from './components/SearchBar/SearchBar';
 class App extends Component {
 
   state = {
-    dummyData: dummyData
+    dummyData: []
   }
+
+  componentDidMount() {
+    this.setState({
+      dummyData: dummyData
+    })
+  }
+
 
 render() {
   return (
