@@ -3,6 +3,7 @@
     border: 1px solid lightgray;
     width: 600px;
     border-radius: 3px;
+    margin: 0 auto;
 }
 .card--image {
     width: 600px;

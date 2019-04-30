@@ -1,11 +1,12 @@
 import React from 'react'
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-import './PostContainer.css'
+import './PostContainer.css';
+import moment from 'moment';
 
 const PostContainer = ({dummyData}) => {
   return (
-    <div className="card" >
+    <div className="card">
        {dummyData.map((ddata, index) => {
            console.log(ddata.imageUrl)
            return (
@@ -20,7 +21,7 @@ const PostContainer = ({dummyData}) => {
                        <p>{ddata.likes} likes</p>
                    </div>
                    <CommentSection comments={ddata.comments} />
-                   <p className="card--timestamp">{ddata.timestamp}</p>
+                   <p className="card--timestamp">{moment().startOf('hour').fromNow()}</p>
                </div>
            )
        })}

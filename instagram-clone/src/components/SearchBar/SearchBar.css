@@ -10,14 +10,16 @@
     align-items: center;
 
 }
-
 .search--input input {
     width: 300px;
     font-size: 2rem;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid lightgray;
+    text-align: center;   
 }
-
+input:focus {
+    outline: none;
+}
 .search--icons {
     display: flex;
 }
@@ -25,7 +27,6 @@
     font-size: 2.4rem;
     color: #333;
 }
-
 .search--title {
     font-family: 'Satisfy', cursive;
 }

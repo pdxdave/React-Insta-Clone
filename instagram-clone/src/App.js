@@ -14,7 +14,9 @@ render() {
   return (
     <div>
       <SearchBar />
-      <PostContainer dummyData={this.state.dummyData} />
+      <div style={{paddingTop: "120px"}}>
+         <PostContainer dummyData={this.state.dummyData} />
+      </div>
     </div>
   )
  }
