@@ -7,9 +7,15 @@ import SearchBar from './components/SearchBar/SearchBar';
 class App extends Component {
 
   state = {
-    dummyData: []
+    dummyData: [],
+    searchText: ''
   }
 
+  handleSearch = (e) => {
+    this.setState({
+      searchText: e.target.value
+    })
+  }
   componentDidMount() {
     this.setState({
       dummyData: dummyData
@@ -20,9 +26,9 @@ class App extends Component {
 render() {
   return (
     <div>
-      <SearchBar />
+      <SearchBar handleSearch={this.handleSearch}/>
       <div style={{paddingTop: "120px"}}>
-         <PostContainer dummyData={this.state.dummyData} />
+         <PostContainer dummyData={this.state.dummyData.filter(post => post.username.includes(this.state.searchText))} />
       </div>
     </div>
   )

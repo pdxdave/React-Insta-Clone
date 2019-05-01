@@ -26,7 +26,7 @@ class PostContainer extends Component {
             //        <PostLikes  postLike={ddata.likes} />
             //        <CommentSection comments={ddata.comments} dummyData={dummyData} />
             //    </div>
-            <div>
+            <div key={index}>
                     <Post  ddata={ddata} dummyData={dummyData} key={index}/>
             </div>
            )

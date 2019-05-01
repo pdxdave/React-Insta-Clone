@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import './SearchBar.css'
 
 class SearchBar extends Component {
+
+   
   render() {
+    
     return (
       <div className="search">
          <div className="search--icons">
@@ -11,7 +14,7 @@ class SearchBar extends Component {
             <h2 className="search--title">Instagram</h2>
          </div>
          <div className="search--input">
-            <input type="text" placeholder="Search"/>
+            <input onChange={this.props.handleSearch} type="text" placeholder="Search"/>
          </div>
          <div className="search--icons">
             <a className="search--icon" href="http://google.com"><i className="far fa-dot-circle"></i></a>
