@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import styled from 'styled-components';
+
 /*   
   Notes for me:
      The constructor props is brining in comments from PostContainer.  In state, comments is set to nothing, while props.comments is populating
@@ -74,6 +76,8 @@ CommentSection.propTypes = {
     user: PropTypes.string,
     textPost: PropTypes.string
 }
+
+
 
 
 export default  CommentSection;
