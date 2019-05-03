@@ -12,7 +12,7 @@ const withAuthenticate = PostsPage => LoginPage =>
          }
     }
 
-    componentDidMount(){
+ componentDidMount(){
         if(localStorage.getItem("user")){
             this.setState({isLoggedin: true})
         }else{
@@ -20,7 +20,7 @@ const withAuthenticate = PostsPage => LoginPage =>
         }
     }
 
-  render() {
+render() {
       if (localStorage.getItem("user")) {
           return <PostsPage />
       }else{
