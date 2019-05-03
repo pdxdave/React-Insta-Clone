@@ -3,6 +3,7 @@ import '../../App.css';
 import dummyData from '../../dummy-data';
 import PostContainer from '../PostContainer/PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+import styled from 'styled-components';
 
 class PostsPage extends Component {
 
@@ -28,12 +29,16 @@ componentDidMount() {
     return (
       <div>
         <SearchBar handleSearch={this.handleSearch} />
-        <div style={{paddingTop: "120px"}}>
+        <PostContainerWrapper >
             <PostContainer dummyData={this.state.dummyData.filter(post => post.username.includes(this.state.searchText))} />
-        </div>
+        </PostContainerWrapper>
       </div>
     )
   }
 }
+
+const PostContainerWrapper = styled.div `
+  padding-top: 120px;
+`
 
 export default PostsPage;

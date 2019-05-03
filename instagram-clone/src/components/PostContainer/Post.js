@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CommentSection from '../CommentSection/CommentSection';
+import styled from 'styled-components';
 
  class Post extends Component {
 
@@ -19,22 +20,64 @@ import CommentSection from '../CommentSection/CommentSection';
 
     return (
       <div>
-         <div className="card--container" > 
-                  <div className="card--logo-container"><img className="card--logo" src={ddata.thumbnailUrl} alt="company logo"/><span>{ddata.username}</span></div>
-                   <img className="card--image" src={ddata.imageUrl} alt=""/>
-                   <div className="icons">
+         <CardContainer > 
+              <CardLogoContainer><CardLogo src={ddata.thumbnailUrl} alt="company logo"/><span>{ddata.username}</span></CardLogoContainer>
+                <CardImage src={ddata.imageUrl} alt=""/>
+                   <CardIcons>
                        <div onClick={this.handleChange}><a href="#"><i className="far fa-heart"></i></a></div>
                        <div><a href="#"><i className="far fa-comment"></i></a></div>
-                   </div>
-                   <div className="card--likes">
+                   </CardIcons>
+                   <CardLikes >
                         <p>{this.state.likes} likes</p>
-                   </div>
-                   {/* <PostLikes  postLike={ddata.likes} /> */}
+                   </CardLikes>
                    <CommentSection comments={ddata.comments} dummyData={dummyData} />
-            </div>
+            </CardContainer>
       </div>
     )
   }
 }
 
+
+const CardContainer = styled.div `
+      span {
+        font-size: .9rem;
+        font-weight: bold;
+        margin-left: 16px;
+      }
+`
+
+const CardLogoContainer = styled.div `
+    display: flex;
+    align-items: center;
+    padding: 16px 20px
+`
+
+const CardLogo = styled.img `
+    height: 30px;
+    width: 30px;
+    border-radius: 90%;
+`
+
+const CardImage = styled.img `
+    width: 600px;
+`
+
+const CardIcons = styled.div `
+    display: flex;
+    font-weight: lighter;
+    font-size: 1.8rem;
+
+      .far {
+        margin: 20px 7px;
+      }
+      .fa-heart{
+        margin-left: 16px;
+      }
+`
+
+const CardLikes = styled.div `
+    margin-top: -10px;
+    margin-left: 16px;
+    padding-bottom: 12px;
+`
 export default Post;

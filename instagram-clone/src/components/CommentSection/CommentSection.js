@@ -58,10 +58,10 @@ class CommentSection extends Component {
             })}
         </div>{/* end of div for comments */}
 
-          <p className="card--timestamp">{moment().startOf('hour').fromNow()}</p>
+          <CardTimeStamp>{moment().startOf('hour').fromNow()}</CardTimeStamp>
 
           <form onSubmit={this.addNewComment}>
-            <input className="comment--input" 
+            <CommentInput 
                   type="text" 
                   placeholder="Add a comment..."
                   onChange={this.handleChange} value={this.state.comments}
@@ -78,6 +78,22 @@ CommentSection.propTypes = {
 }
 
 
+const CardTimeStamp = styled.p `
+    margin-left: 16px;
+    margin-top: 12px;
+    color: #808080;
+`
 
+const CommentInput = styled.input `
+    margin-left: 16px;
+    width: 90%;
+    font-size: 1.4rem;
+    border-top: 1px solid #808080;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 12px;
+    padding: 5px;
+`
 
 export default  CommentSection;

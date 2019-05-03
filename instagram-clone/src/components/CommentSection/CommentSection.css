@@ -1,8 +1,8 @@
-.comment {
+/* .comments {
     padding: 5px 0px;
-}
+} */
 
-.comment--input {
+/* .comment--input {
     margin-left: 16px;
     width: 90%;
     font-size: 1.4rem;
@@ -12,4 +12,10 @@
     border-right: none;
     margin-top: 12px;
     padding: 5px;
-}
+} */
+
+/* .card--timestamp {
+    margin-left: 16px;
+    margin-top: 12px;
+    color: #808080;
+} */

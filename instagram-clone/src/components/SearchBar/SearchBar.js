@@ -44,6 +44,10 @@ const SearchIcons = styled.div `
 const SearchIcon = styled.a `
    font-size: 2.4rem;
    color: #333;
+
+    .fa-heart{
+      padding-right: 8px;
+   }
 `
 const SearchTitle = styled.h2 `
   font-family: 'Satisfy', cursive;
@@ -54,6 +58,9 @@ const SearchInput = styled.input `
    border-radius: 5px;
    border: 1px solid lightgray;
    text-align: center;   
+    &:focus {
+      outline: none;
+    }
 `
 const SearchBreak = styled.p `
    font-size: 2rem;
