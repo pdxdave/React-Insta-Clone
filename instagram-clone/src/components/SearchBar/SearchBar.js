@@ -46,7 +46,7 @@ const SearchIcon = styled.a `
    color: #333;
 
     .fa-heart{
-      padding-right: 8px;
+      padding: 0 10px;
    }
 `
 const SearchTitle = styled.h2 `
